@@ -24,7 +24,7 @@ const someDiv = <div>{getMessage()}</div>;
     function transform() {
       try {
         outputEl.innerHTML = Babel.transform(inputEl.value, {
-          presets: ['es2015', 'react', 'stage-0']
+          plugins: ["transform-react-jsx"]
         }).code;
       } catch (ex) {
         outputEl.innerHTML = 'ERROR: ' + ex.message;
